@@ -15,7 +15,9 @@ class TestGame(unittest.TestCase):
         self.assertEqual('.mp3', tune[-4:])
 
     def test_check_tune(self):
-        self.assertTrue(self.game.tune==self.game.inp)
+        self.game.tune='Рома, извини.mp3'
+        self.game.inp = 'рома, извини.mp3'
+        self.assertTrue(self.game.check_tune())
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
