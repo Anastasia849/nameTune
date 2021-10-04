@@ -16,7 +16,7 @@ class TestGame(unittest.TestCase):
 
     def test_check_tune(self):
         self.game.tune='Рома, извини.mp3'
-        self.game.inp = 'рома, извини.mp3'
+        self.game.inp = 'рома, извини'
         self.assertTrue(self.game.check_tune())
 
 if __name__ == '__main__':
